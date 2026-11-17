@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hussein Taha — Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Hussein Taha, a Full Stack Developer from Cairo, Egypt. Read it as source code in an IDE, or browse it like a UI component library."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hussein Taha — Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="A dual-mode portfolio: an IDE that renders my code, and docs that document me like a component library."
+    />
+    <meta property="og:image" content="logo.jfif" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="logo.jfif" />
+
+    <!-- Set theme before paint to avoid flash -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("htp.theme") || "dark";
+          document.documentElement.classList.toggle("dark", t !== "light");
+        } catch (e) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind (Play CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+              mono: ['"JetBrains Mono"', "ui-monospace", "SFMono-Regular", "monospace"],
+            },
+            colors: {
+              accent: {
+                DEFAULT: "#6366f1",
+                600: "#4f46e5",
+                500: "#6366f1",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="font-sans antialiased">
+    <!-- Global controls: mode switch + theme (always visible) -->
+    <div id="app-controls">
+      <div id="settings-panel" class="settings-panel" role="menu" aria-label="Settings" hidden>
+        <div class="settings-title">View mode</div>
+        <div class="seg" role="tablist" aria-label="View mode">
+          <button class="seg-btn" data-mode="site" role="tab" aria-selected="true">
+            <span class="seg-ico">🌐</span><span class="seg-lbl">Website</span>
+          </button>
+          <button class="seg-btn" data-mode="ide" role="tab" aria-selected="false">
+            <span class="seg-ico">&lt;/&gt;</span><span class="seg-lbl">IDE</span>
+          </button>
+          <button class="seg-btn" data-mode="docs" role="tab" aria-selected="false">
+            <span class="seg-ico">📖</span><span class="seg-lbl">Docs</span>
+          </button>
+        </div>
+        <div class="settings-divider"></div>
+        <button id="theme-toggle" class="settings-row" aria-label="Toggle theme">
+          <span class="theme-ico">🌙</span><span class="settings-row-lbl">Dark mode</span>
+        </button>
+      </div>
+      <button
+        id="settings-toggle"
+        class="fab"
+        aria-label="Open settings"
+        aria-expanded="false"
+        aria-haspopup="menu"
+        title="Settings — switch mode &amp; theme"
+      >
+        <span class="fab-ico">⚙</span>
+      </button>
+    </div>
+
+    <!-- Website mode (general audience) -->
+    <main id="site-root" class="mode-root"></main>
+
+    <!-- IDE mode -->
+    <main id="ide-root" class="mode-root" hidden></main>
+
+    <!-- Docs mode -->
+    <main id="docs-root" class="mode-root" hidden></main>
+
+    <!-- Command palette -->
+    <div id="palette" class="palette" hidden>
+      <div class="palette-backdrop" data-close="1"></div>
+      <div class="palette-box" role="dialog" aria-modal="true" aria-label="Command palette">
+        <div class="palette-search">
+          <span class="palette-search-ico">⌘K</span>
+          <input
+            id="palette-input"
+            class="palette-input"
+            type="text"
+            placeholder="Search pages, files & actions…"
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </div>
+        <ul id="palette-list" class="palette-list"></ul>
+        <div class="palette-foot">
+          <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+          <span><kbd>⏎</kbd> select</span>
+          <span><kbd>esc</kbd> close</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

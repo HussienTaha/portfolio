@@ -1,0 +1,45 @@
+
+Hussein Taha
+HussienTaha
+software engineer
+ 11 followers · 9 following
+Cairo, Egypt
+hussien212258@gmail.com
+in/hussien-taha-99ba24386
+Achievements
+Achievement: Pull Shark
+Find a repository…
+TaskFlow-jira Public
+a full-stack real-time task management system that I built from the ground up. Jaira was created to solve a simple problem: managing tasks, teams, and progress in a way that feels fast, organized, …
+ TypeScript Updated on Aug 8
+nexori Public
+ JavaScript Updated on Jul 23
+HussienTaha Public
+ 1 Updated on May 12
+Kalematy Public
+ TypeScript Updated on May 12
+E-commerceApp-Nestjs Public
+ TypeScript Updated on Jan 4
+sarahaApp Public
+ JavaScript Updated on Nov 11, 2025
+socialApp Public
+ TypeScript Updated on Nov 11, 2025
+Chat_Social_App Public
+💬 Chat Social App — A simple social chatting application that allows users to connect, add friends, groups conversations with an easy-to-use interface.⚡ Real-time chat built using Socket.IO on both…
+ JavaScript Updated on Nov 8, 2025
+LibraryManagementSystem_Backend_Node.js Public
+ JavaScript Updated on Sep 15, 2025
+movies Public
+ JavaScript Updated on Mar 7, 2025
+FoodDex Public
+ JavaScript Updated on Feb 24, 2025
+game-project Public
+ JavaScript Updated on Feb 24, 2025
+FreshCart-E-commerce-App Public
+ JavaScript Updated on Feb 12, 2025
+crudsystem Public
+ JavaScript Updated on Dec 22, 2024
+weather Public
+ JavaScript Updated on Dec 21, 2024
+loginsystem Public
+ HTML Updated on Dec 21, 2024
